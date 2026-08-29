@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Vidya Setu Student Hub</title>
+</head>
+<body bgcolor="#F2F7F3" text="#263829">
+
+  <table width="100%" bgcolor="#2A5232" cellpadding="15">
+    <tr>
+      <td align="center">
+        <font color="#FFFFFF" face="Arial">
+          <h1>Student Portal Login</h1>
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#3B6E45">
+        <font face="Arial" size="2">
+          <a href="index.html" style="color:white;"><b>Home</b></a> &nbsp;|&nbsp;
+          <a href="login.html" style="color:white;"><b>Login</b></a> &nbsp;|&nbsp;
+          <a href="registration.html" style="color:white;"><b>Register</b></a>
+        </font>
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table width="400" align="center" border="1" cellpadding="20" bgcolor="#FFFFFF" bordercolor="#B2D8B6">
+    <tr>
+      <td>
+        <form>
+          <h2 align="center">Sign In</h2>
+          
+          <label for="enrollment"><b>Enrolment Number / Email:</b></label><br>
+          <input type="text" id="enrollment" name="enrollment" placeholder="e.g., 22BCE1042" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+          
+          <br><br>
+
+          <label for="password"><b>Password:</b></label><br>
+          <input type="password" id="password" name="password" placeholder="Enter password" style="width: 100%; padding: 8px; margin-top: 5px;" required>
+          
+          <br><br>
+
+          <input type="checkbox" id="toggleLoginPassword" onclick="toggleVisibility('password')">
+          <label for="toggleLoginPassword">Show Password</label>
+
+          <br><br>
+
+          <button type="submit" style="width: 100%; padding: 10px; background-color: #2A5232; color: white; border: none; font-size: 16px; cursor: pointer;">Log In</button>
+          
+          <br><br>
+          <table width="100%" border="0">
+            <tr>
+              <td align="left"><a href="forget-password.html"><font size="2">Forgot Password?</font></a></td>
+              <td align="right"><a href="registration.html"><font size="2">New Student? Register</font></a></td>
+            </tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function toggleVisibility(id) {
+      const field = document.getElementById(id);
+      field.type = field.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration | Vidya Setu Student Hub</title>
+</head>
+<body bgcolor="#F2F7F3" text="#263829">
+
+  <table width="100%" bgcolor="#2A5232" cellpadding="15">
+    <tr>
+      <td align="center">
+        <font color="#FFFFFF" face="Arial">
+          <h1>Student Portal Registration</h1>
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#3B6E45">
+        <font face="Arial" size="2">
+          <a href="index.html" style="color:white;"><b>Home</b></a> &nbsp;|&nbsp;
+          <a href="login.html" style="color:white;"><b>Login</b></a>
+        </font>
+      </td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table width="450" align="center" border="1" cellpadding="20" bgcolor="#FFFFFF" bordercolor="#B2D8B6">
+    <tr>
+      <td>
+        <form>
+          <h2 align="center">Create Account</h2>
+
+          <label for="fullName"><b>Full Name:</b></label><br>
+          <input type="text" id="fullName" name="fullName" style="width:100%; padding:8px; margin-top:5px;" required><br><br>
+
+          <label for="enrollNo"><b>Enrolment Number:</b></label><br>
+          <input type="text" id="enrollNo" name="enrollNo" style="width:100%; padding:8px; margin-top:5px;" required><br><br>
+
+          <label for="regEmail"><b>Email Address:</b></label><br>
+          <input type="email" id="regEmail" name="regEmail" style="width:100%; padding:8px; margin-top:5px;" required><br><br>
+
+          <label for="regPass"><b>Create Password:</b></label><br>
+          <input type="password" id="regPass" name="regPass" style="width:100%; padding:8px; margin-top:5px;" required><br><br>
+
+          <label for="confirmPass"><b>Confirm Password:</b></label><br>
+          <input type="password" id="confirmPass" name="confirmPass" style="width:100%; padding:8px; margin-top:5px;" required><br><br>
+
+          <input type="checkbox" id="toggleRegPasswords" onclick="toggleRegistrationPasswords()">
+          <label for="toggleRegPasswords">Show Passwords</label>
+
+          <br><br>
+
+          <button type="submit" style="width:100%; padding:10px; background-color:#2A5232; color:white; border:none; font-size:16px; cursor:pointer;">Register Account</button>
+          
+          <br><br>
+          <p align="center"><font size="2">Already registered? <a href="login.html">Log In here</a></font></p>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function toggleRegistrationPasswords() {
+      const p1 = document.getElementById("regPass");
+      const p2 = document.getElementById("confirmPass");
+      const targetType = p1.type === "password" ? "text" : "password";
+      p1.type = targetType;
+      p2.type = targetType;
+    }
+  </script>
+
+</body>
+</html>
