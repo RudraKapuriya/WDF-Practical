@@ -1,0 +1,142 @@
+.management {
+  width: min(96%, 1180px);
+  margin: 32px auto;
+}
+.management-header,
+.management-toolbar,
+.management-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.management-header {
+  margin-bottom: 20px;
+}
+.management-header h1,
+.management-card h2 {
+  margin: 0;
+  color: #163b36;
+}
+.management-card {
+  margin: 18px 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(26, 53, 47, 0.06);
+}
+.management-card h2 {
+  margin-bottom: 16px;
+}
+.management-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 0 14px;
+}
+.management label {
+  display: block;
+  margin-bottom: 5px;
+  color: #45534e;
+  font-size: 13px;
+}
+.management input,
+.management select {
+  width: 100%;
+  min-height: 40px;
+  margin: 0 0 12px;
+  padding: 8px;
+  border: 1px solid #cbd6d1;
+  border-radius: 4px;
+  font: inherit;
+}
+.management input:focus,
+.management select:focus {
+  outline: 0;
+  border-color: #176b5b;
+  box-shadow: 0 0 0 2px #dcece8;
+}
+.management-toolbar {
+  justify-content: flex-start;
+}
+.management-toolbar .filter-search {
+  flex: 1 1 240px;
+}
+.management-toolbar .filter-search input {
+  margin-bottom: 0;
+}
+.management button,
+.management .button-link {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid #176b5b;
+  border-radius: 5px;
+  background: #176b5b;
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.management .button-secondary {
+  background: #fff;
+  color: #176b5b;
+}
+.management .button-danger {
+  border-color: #a12b25;
+  background: #a12b25;
+}
+.management form.inline {
+  display: inline;
+  margin: 0;
+}
+.management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.management th,
+.management td {
+  padding: 10px 9px;
+  border-bottom: 1px solid #dfe6e3;
+  text-align: left;
+  vertical-align: top;
+}
+.management th {
+  background: #e8f1ee;
+  color: #163b36;
+}
+.management td.actions {
+  min-width: 150px;
+  white-space: nowrap;
+}
+.management .message {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-left: 4px solid #176b5b;
+  background: #e8f1ee;
+}
+.management .message.error {
+  border-left-color: #a12b25;
+  background: #fff0ef;
+}
+.management .muted {
+  color: #68756f;
+}
+@media (max-width: 800px) {
+  .management-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+  .management table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 480px) {
+  .management-grid {
+    grid-template-columns: 1fr;
+  }
+  .management-card {
+    padding: 16px;
+  }
+}

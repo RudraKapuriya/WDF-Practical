@@ -1,0 +1,130 @@
+.admin-dashboard {
+  padding-top: 30px;
+  padding-bottom: 48px;
+}
+.dashboard-heading,
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.dashboard-heading {
+  margin-bottom: 22px;
+}
+.dashboard-heading h1,
+.section-heading h2 {
+  margin: 0;
+  color: #163b36;
+}
+.dashboard-heading p,
+.section-heading p {
+  margin: 5px 0 0;
+  color: #68756f;
+}
+.role-badge {
+  padding: 7px 12px;
+  border-radius: 18px;
+  background: #e8f1ee;
+  color: #176b5b;
+  font-weight: 700;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.stat-card,
+.dashboard-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(26, 53, 47, 0.06);
+}
+.stat-card span,
+.stat-card small {
+  display: block;
+  color: #68756f;
+}
+.stat-card strong {
+  display: block;
+  margin: 7px 0;
+  color: #163b36;
+  font-size: 32px;
+}
+.dashboard-card {
+  margin-top: 20px;
+}
+.dashboard-card .section-heading {
+  margin-bottom: 14px;
+}
+.dashboard-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dashboard-card th,
+.dashboard-card td {
+  padding: 10px;
+  border-bottom: 1px solid #dfe6e3;
+  text-align: left;
+  vertical-align: top;
+}
+.dashboard-card th {
+  background: #e8f1ee;
+  color: #163b36;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+.empty-state {
+  margin: 0;
+  padding: 14px;
+  background: #f4f6f8;
+  color: #68756f;
+}
+.dashboard-message {
+  padding: 12px 14px;
+  border-left: 4px solid #176b5b;
+  background: #e8f1ee;
+}
+.dashboard-message.error {
+  border-color: #a12b25;
+  background: #fff0ef;
+}
+body.theme-dark .stat-card,
+body.theme-dark .dashboard-card {
+  background: #223630;
+  color: #e8f1ee;
+}
+body.theme-dark .dashboard-heading h1,
+body.theme-dark .section-heading h2,
+body.theme-dark .stat-card strong,
+body.theme-dark .dashboard-card th {
+  color: #e8f1ee;
+}
+body.theme-dark .dashboard-card th {
+  background: #315247;
+}
+body.theme-dark .dashboard-card td {
+  border-color: #5b776d;
+}
+@media (max-width: 800px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header-inner {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+}
+@media (max-width: 520px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-heading,
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
