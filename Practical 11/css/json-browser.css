@@ -1,0 +1,108 @@
+.json-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dfe6e3;
+  border-radius: 6px;
+}
+.json-controls label {
+  display: grid;
+  gap: 5px;
+  color: #34453f;
+  font-size: 13px;
+  font-weight: 700;
+}
+.json-controls input,
+.json-controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #b9c7c1;
+  border-radius: 4px;
+  background: #fff;
+  color: #263238;
+  font: inherit;
+  font-weight: 400;
+}
+.json-status {
+  min-height: 24px;
+  color: #53625d;
+}
+.json-status[data-state="error"] {
+  padding: 12px;
+  background: #fff0ec;
+  border-left: 4px solid #b84b35;
+  color: #7d2d1d;
+}
+.json-status[data-state="loading"]::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border: 2px solid #b9c7c1;
+  border-top-color: #176b5b;
+  border-radius: 50%;
+  animation: json-spin 0.8s linear infinite;
+}
+.json-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.json-card {
+  min-width: 0;
+  box-shadow: none;
+}
+.json-card h3 {
+  overflow-wrap: anywhere;
+}
+.json-meta {
+  color: #718078;
+}
+.faq-results {
+  grid-template-columns: 1fr;
+}
+.notice-results {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.json-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.json-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.about-intro {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dfe6e3;
+}
+.about-intro h2 {
+  margin-bottom: 6px;
+  color: #163b36;
+}
+.about-intro p {
+  max-width: 720px;
+  color: #53625d;
+}
+@keyframes json-spin {
+  to { transform: rotate(360deg); }
+}
+@media (max-width: 800px) {
+  .json-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .json-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .json-controls,
+  .json-results,
+  .notice-results { grid-template-columns: 1fr; }
+}
