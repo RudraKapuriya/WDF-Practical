@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration | Vidya Setu Student Hub</title>
+    <link rel="stylesheet" href="css/registration.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body class="auth-page">
+    <div class="auth-wrap" style="max-width: 650px">
+      <div class="auth-brand">
+        <a class="logo" href="index.html" style="justify-content: center"
+          ><span class="logo-mark">VS</span
+          ><span><strong>Vidya Setu</strong><small>Student Hub</small></span></a
+        >
+        <h1>Student Registration</h1>
+      </div>
+      <form class="form-card" id="student-registration" novalidate>
+        <h2>Create student account</h2>
+        <label for="full-name">Full name</label>
+        <input
+          id="full-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          placeholder="e.g. Asha Sharma"
+          pattern="[A-Za-z][A-Za-z .'-]{1,79}"
+          minlength="2"
+          maxlength="80"
+          required
+          aria-describedby="name-error"
+        />
+        <p class="field-error" id="name-error"></p>
+
+        <div class="form-row">
+          <div>
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="name@example.com"
+              maxlength="254"
+              required
+              aria-describedby="email-error"
+            />
+            <p class="field-error" id="email-error"></p>
+          </div>
+          <div>
+            <label for="mobile">Mobile number</label>
+            <input
+              id="mobile"
+              name="mobile"
+              type="tel"
+              autocomplete="tel"
+              inputmode="numeric"
+              placeholder="10-digit mobile number"
+              pattern="[6-9][0-9]{9}"
+              maxlength="10"
+              required
+              aria-describedby="mobile-error"
+            />
+            <p class="field-error" id="mobile-error"></p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Create a strong password"
+              minlength="8"
+              required
+              aria-describedby="password-strength password-error"
+            />
+            <p class="password-strength" id="password-strength" aria-live="polite">
+              Use 8+ characters with uppercase, lowercase, a number, and a symbol.
+            </p>
+            <p class="field-error" id="password-error"></p>
+          </div>
+          <div>
+            <label for="confirm-password">Confirm password</label>
+            <input
+              id="confirm-password"
+              name="confirmPassword"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Re-enter your password"
+              required
+              aria-describedby="confirm-password-error"
+            />
+            <p class="field-error" id="confirm-password-error"></p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="course">Course</label>
+            <select id="course" name="course" required aria-describedby="course-error">
+              <option value="">Select course</option>
+              <option value="BCA">BCA</option>
+              <option value="BBA">BBA</option>
+              <option value="BSc IT">B.Sc IT</option>
+            </select>
+            <p class="field-error" id="course-error"></p>
+          </div>
+          <div>
+            <label for="year">Year of study</label>
+            <select id="year" name="year" required aria-describedby="year-error">
+              <option value="">Select year</option>
+              <option value="1">First year</option>
+              <option value="2">Second year</option>
+              <option value="3">Third year</option>
+              <option value="4">Fourth year</option>
+            </select>
+            <p class="field-error" id="year-error"></p>
+          </div>
+        </div>
+
+        <fieldset class="choice-group" aria-describedby="gender-error">
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="female" required /> Female</label>
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+          <label><input type="radio" name="gender" value="prefer-not-to-say" /> Prefer not to say</label>
+          <p class="field-error" id="gender-error"></p>
+        </fieldset>
+
+        <div class="terms-field">
+          <label for="terms">
+            <input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error" />
+            I accept the terms and conditions.
+          </label>
+          <p class="field-error" id="terms-error"></p>
+        </div>
+
+        <button class="btn btn-primary" style="width: 100%" type="submit">
+          Register
+        </button>
+        <p class="form-note">
+          Already registered? <a href="login.html">Go to login</a>
+        </p>
+      </form>
+    </div>
+    <script src="js/registration.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
