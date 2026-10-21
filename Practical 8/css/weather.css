@@ -1,0 +1,67 @@
+.weather-widget {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+  min-width: 165px;
+  padding: 8px 10px;
+  border: 1px solid #dfe6e3;
+  border-radius: 6px;
+  background: #f7faf9;
+  color: #176b5b;
+}
+.weather-icon {
+  width: 22px;
+  text-align: center;
+  font-size: 18px;
+}
+.weather-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.weather-copy strong {
+  overflow: hidden;
+  color: #263238;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weather-copy small {
+  color: #64716c;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.weather-refresh {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #176b5b;
+  cursor: pointer;
+}
+.weather-refresh:hover,
+.weather-refresh:focus-visible {
+  background: #e5f0ed;
+}
+.weather-refresh:focus-visible {
+  outline: 2px solid #176b5b;
+  outline-offset: 2px;
+}
+.weather-widget-auth {
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px auto 0;
+  text-align: left;
+}
+@media (max-width: 800px) {
+  .header-inner > .weather-widget {
+    align-self: center;
+  }
+}

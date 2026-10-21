@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #263238;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: #176b5b;
+}
+a:hover {
+  color: #0d4f43;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #163b36;
+}
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #d7a33d;
+  color: #163b36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+.logo strong {
+  display: block;
+  font-size: 21px;
+}
+.logo small {
+  display: block;
+  color: #718078;
+  font-size: 12px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 17px;
+  border-radius: 5px;
+  border: 1px solid #176b5b;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: #176b5b;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #0f594c;
+  color: #fff;
+}
+.form-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dfe6e3;
+  border-radius: 8px;
+  padding: 28px;
+  box-shadow: 0 3px 10px rgba(26, 53, 47, 0.06);
+}
+.form-card h2 {
+  margin-top: 0;
+  color: #163b36;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: #45534e;
+  margin-bottom: 5px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd6d1;
+  border-radius: 4px;
+  font: inherit;
+  margin-bottom: 15px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #176b5b;
+  box-shadow: 0 0 0 2px #dcece8;
+}
+.auth-page {
+  background: #edf3f1;
+  min-height: 100vh;
+}
+.auth-wrap {
+  max-width: 450px;
+  margin: 45px auto;
+}
+.auth-brand {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.auth-brand h1 {
+  color: #163b36;
+  margin: 0;
+}
+.auth-brand p {
+  color: #6b7772;
+  margin: 4px 0;
+}
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.js-control {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #176b5b;
+  border-radius: 5px;
+  padding: 8px 10px;
+  background: #fff;
+  color: #176b5b;
+}
+.theme-toggle {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.menu-toggle {
+  display: none;
+}
+.js-banner {
+  position: relative;
+  margin: 14px auto 0;
+  width: 90%;
+  max-width: 1100px;
+  padding: 12px 42px 12px 15px;
+  background: #fff7e7;
+  border-left: 4px solid #d7a33d;
+  color: #263238;
+}
+.js-close {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  border: 0;
+  background: 0 0;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+.js-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(22, 59, 54, 0.65);
+}
+.js-modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 26px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+.js-modal h2 {
+  margin-top: 0;
+  color: #163b36;
+}
+.js-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: 0 0;
+  font-size: 25px;
+  cursor: pointer;
+  color: #163b36;
+}
+.js-slider {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0ef;
+}
+.js-slide {
+  min-height: 55px;
+  color: #53625d;
+}
+.js-slide[hidden] {
+  display: none;
+}
+.js-slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.js-faq {
+  margin-top: 20px;
+}
+.js-faq details {
+  margin-bottom: 8px;
+  padding: 13px 15px;
+  background: #fff;
+  border: 1px solid #dfe6e3;
+  border-radius: 6px;
+}
+.js-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #1b4b42;
+}
+.password-control {
+  display: flex;
+  align-items: flex-start;
+}
+.password-control input {
+  min-width: 0;
+  margin-bottom: 15px;
+}
+.password-toggle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  min-height: 42px;
+  margin-left: -1px;
+  border: 1px solid #cbd6d1;
+  border-radius: 0 4px 4px 0;
+  background: #fff;
+  color: #176b5b;
+  cursor: pointer;
+}
+body.theme-dark {
+  background: #172522;
+  color: #e8f1ee;
+}
+body.theme-dark .card,
+body.theme-dark .data-table,
+body.theme-dark .form-card,
+body.theme-dark .header,
+body.theme-dark .hero-card,
+body.theme-dark .js-faq details,
+body.theme-dark .js-modal {
+  background: #223630;
+  color: #e8f1ee;
+}
+body.theme-dark .hero,
+body.theme-dark .page-head {
+  background: #203b34;
+}
+body.theme-dark .card p,
+body.theme-dark .form-note,
+body.theme-dark .hero p,
+body.theme-dark .js-faq p,
+body.theme-dark .js-slide,
+body.theme-dark .list,
+body.theme-dark .page-head p,
+body.theme-dark .section-title p,
+body.theme-dark .stat span,
+body.theme-dark label {
+  color: #c2d1cc;
+}
+body.theme-dark .auth-brand h1,
+body.theme-dark .auth-brand p,
+body.theme-dark .card h2,
+body.theme-dark .card h3,
+body.theme-dark .form-card h2,
+body.theme-dark .hero h1,
+body.theme-dark .hero-card h3,
+body.theme-dark .js-faq h2,
+body.theme-dark .js-modal h2,
+body.theme-dark .js-modal-close,
+body.theme-dark .logo,
+body.theme-dark .nav a,
+body.theme-dark .page-head h1,
+body.theme-dark .quick-item,
+body.theme-dark .quick-item strong,
+body.theme-dark .section-title h2,
+body.theme-dark .stat strong {
+  color: #e8f1ee;
+}
+body.theme-dark input,
+body.theme-dark select,
+body.theme-dark textarea {
+  background: #172522;
+  color: #e8f1ee;
+  border-color: #5b776d;
+}
+body.theme-dark .data-table td,
+body.theme-dark .data-table th {
+  border-color: #5b776d;
+  color: #e8f1ee;
+}
+body.theme-dark .data-table th {
+  background: #315247;
+}
+body.theme-dark .data-table tr:nth-child(2n) td {
+  background: #29443b;
+}
+body.theme-dark .btn-light {
+  background: #223630;
+  color: #e8f1ee;
+}
+body.theme-dark .password-toggle {
+  background: #172522;
+  color: #e8f1ee;
+  border-color: #5b776d;
+}
+body.theme-dark .nav a.active,
+body.theme-dark .nav a:focus-visible,
+body.theme-dark .nav a:hover {
+  background: #d7a33d;
+  color: #163b36;
+}
+@media (max-width: 800px) {
+.menu-toggle {
+    display: inline-block;
+  }
+.theme-toggle {
+    position: absolute;
+    top: 14px;
+    right: 0;
+  }
+}

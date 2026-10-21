@@ -1,0 +1,57 @@
+"use strict";
+
+var body = document.body;
+var nav = document.querySelector(".nav");
+var header = document.querySelector(".header-inner");
+var themeKey = "vidya-setu-theme";
+
+function makeButton(text, className) {
+	var button = document.createElement("button");
+	button.type = "button";
+	button.className = "js-control " + className;
+	button.textContent = text;
+	return button;
+}
+
+function setupHeader() {
+	var oldTheme = localStorage.getItem(themeKey);
+	if (header) {
+		if (oldTheme === "dark") body.classList.add("theme-dark");
+		var themeButton = makeButton(oldTheme === "dark" ? "Light mode" : "Dark mode", "theme-toggle");
+		themeButton.setAttribute("aria-pressed", oldTheme === "dark");
+		themeButton.addEventListener("click", function () {
+			var darkMode = body.classList.toggle("theme-dark");
+			localStorage.setItem(themeKey, darkMode ? "dark" : "light");
+			themeButton.textContent = darkMode ? "Light mode" : "Dark mode";
+			themeButton.setAttribute("aria-pressed", darkMode);
+		});
+		header.appendChild(themeButton);
+	}
+	if (nav && header) {
+		var menuButton = makeButton("Menu", "menu-toggle");
+		menuButton.setAttribute("aria-controls", "main-navigation");
+		menuButton.setAttribute("aria-expanded", "false");
+		nav.id = "main-navigation";
+		nav.classList.add("js-collapsed");
+		menuButton.addEventListener("click", function () {
+			var menuOpen = nav.classList.toggle("js-open");
+			nav.classList.toggle("js-collapsed", !menuOpen);
+			menuButton.setAttribute("aria-expanded", menuOpen);
+		});
+		header.insertBefore(menuButton, nav);
+	}
+	var pageHeader = document.querySelector(".header");
+	if (pageHeader) {
+		var banner = document.createElement("div");
+		var close = makeButton("×", "js-close");
+		banner.className = "js-banner";
+		banner.setAttribute("role", "status");
+		banner.innerHTML = "<strong>Portal update:</strong> Mid-semester examinations begin on 25 August.";
+		close.setAttribute("aria-label", "Dismiss notification");
+		close.addEventListener("click", function () { banner.remove(); });
+		banner.appendChild(close);
+		pageHeader.after(banner);
+	}
+}
+
+setupHeader();
