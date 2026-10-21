@@ -1,0 +1,8 @@
+[
+  {"question":"What can I find in the portal?","answer":"You can review attendance, results, fees, notices, and student support information.","category":"Portal"},
+  {"question":"How do I contact student support?","answer":"Open the Contact page for the support office address, phone number, email, and message form.","category":"Support"},
+  {"question":"Where can I find the latest college notices?","answer":"Select Notices in the main navigation to browse current updates and announcements.","category":"Notices"},
+  {"question":"How often is the information updated?","answer":"Information is loaded from JSON data files whenever you open the page. The files can be updated independently of the page markup.","category":"Portal"},
+  {"question":"Why is the list not loading when I open the HTML file directly?","answer":"Browsers restrict Fetch API requests from file URLs. Run the folder through a local web server so the page and JSON files share an origin.","category":"Support"},
+  {"question":"Can I search and sort the results?","answer":"Yes. Use the search field, topic filter, sort selector, and page controls above the list.","category":"Portal"}
+]

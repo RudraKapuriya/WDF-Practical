@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Melo",
+        "email": "meloon@gmail.com",
+        "mobile": "9989889890",
+        "password_hash": "$2y$10$4EXJ7YCs/4s3E9.PZ87Q/uycx4dQRLToSqd3NxJG/qihA8PpBwNl2",
+        "course": "BSc IT",
+        "year": "1",
+        "gender": "male",
+        "registered_at": "2026-10-11T14:03:00+02:00"
+    }
+]
