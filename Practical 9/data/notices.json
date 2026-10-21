@@ -1,0 +1,9 @@
+[
+  {"title":"Mid-Semester Examination Timetable","description":"The examination timetable is available from the academic office. Check your subject, date, and reporting time before exam week.","date":"2026-09-24","category":"Examination"},
+  {"title":"Web Technology Lab Submission","description":"Submit the completed practical record before your scheduled lab evaluation.","date":"2026-09-22","category":"Academic"},
+  {"title":"Library Timing Update","description":"The central library will remain open until 7:00 PM on weekdays during the examination preparation period.","date":"2026-09-18","category":"Facilities"},
+  {"title":"Student Innovation Showcase Registration","description":"Students can register project teams with the activity office by 5 October.","date":"2026-09-15","category":"Events"},
+  {"title":"Fee Payment Reminder","description":"Please review your semester fee status in the Fees section and contact the office if you need assistance.","date":"2026-09-10","category":"Administration"},
+  {"title":"Career Skills Workshop","description":"Registration is open for the upcoming resume and interview preparation workshop.","date":"2026-09-06","category":"Events"},
+  {"title":"Student Support Office Hours","description":"The support office is available Monday to Friday from 9:30 AM to 4:00 PM.","date":"2026-09-02","category":"Administration"}
+]

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Vidya Setu Student Hub</title>
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+    <link rel="stylesheet" href="css/json-browser.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <span>Student Portal • Academic Year 2026–27</span>
+        <span>Welcome to Vidya Setu</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html">
+          <span class="logo-mark">VS</span>
+          <span><strong>Vidya Setu</strong> <small>Student Hub</small></span></a
+        >
+        <nav class="nav">
+          <a class="" href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a class="" href="attendance.html">Attendance</a>
+          <a class="" href="result.html">Results</a>
+          <a class="" href="fees.html">Fees</a>
+          <a class="" href="announcement.html">Notices</a>
+          <a class="" href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+    <section class="page-head">
+      <div class="container">
+        <h1>About Vidya Setu</h1>
+        <p>A student-friendly academic information portal.</p>
+      </div>
+    </section>
+    <main class="main">
+      <div class="container">
+        <section class="about-intro">
+          <h2>What is Vidya Setu?</h2>
+          <p>Vidya Setu is a student hub that brings academic information and college updates together. The name means a bridge to education.</p>
+        </section>
+        <section class="json-browser" data-json-browser data-source="data/faqs.json" data-title-key="question" data-description-key="answer" data-category-key="category">
+          <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to common questions about the student portal.</p>
+          </div>
+          <div class="json-controls" aria-label="Filter frequently asked questions">
+            <label>Search <input type="search" data-search placeholder="Search questions" /></label>
+            <label>Topic <select data-category><option value="">All topics</option></select></label>
+            <label>Sort by <select data-sort><option value="title-asc">Question A-Z</option><option value="title-desc">Question Z-A</option></select></label>
+            <label>Per page <select data-page-size><option>3</option><option>6</option><option>9</option></select></label>
+          </div>
+          <p class="json-status" data-status role="status" aria-live="polite">Loading questions...</p>
+          <div class="json-results faq-results" data-results></div>
+          <nav class="json-pagination" data-pagination aria-label="FAQ pages"></nav>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Vidya Setu Student Hub</h3>
+          <p>
+            A simple student portal for checking academic information, notices,
+            fees and attendance in one place.
+          </p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="attendance.html">Attendance</a
+          ><a href="result.html">Results</a><a href="fees.html">Fees</a>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <a href="contact.html">Contact Us</a
+          ><a href="about.html">About Portal</a
+          ><a href="announcement.html">Announcements</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/about.js?v=6"></script>
+    <script src="js/json-browser.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
